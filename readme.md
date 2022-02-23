@@ -2,9 +2,13 @@
 
 ## TypeScript
 
-### Union helper
+### Utils
 
-#### StrictUnion
+### `StrictUnion`
+
+this type helps to access members of all union constituents
+
+reference: [Twitter](https://twitter.com/TitianCernicova/status/1496130225490604046)
 
 here's a code to copy/paste
 
@@ -18,7 +22,7 @@ type StrictUnionHelper<T, TAll> = T extends any
   : never;
 ```
 
-what and why?
+what and why? (scroll to the bottom to see the final example)
 
 ```ts
 type Success<T> = { kind: "success"; value: T };
